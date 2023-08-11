@@ -26,6 +26,13 @@
 @code {
     private string[] Pieces = new string[42];
 
+    private void PlayPiece(byte col) 
+    {
+        var landingRow = State.PlayPiece(col);
+        var cssClass = $"player{State.PlayerTurn} col{col} drop{landingRow}";
+        Pieces[State.CurrentTurn - 1] = cssClass;
+    }
+
 	protected override void OnInitialized()
 	{
 		State.ResetBoard();
