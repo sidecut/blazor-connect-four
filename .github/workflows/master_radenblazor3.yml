@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - RadenBlazor3
 on:
   push:
     branches:
-      - master
+      - virgin-project
   workflow_dispatch:
 
 jobs:
